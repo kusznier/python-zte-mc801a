@@ -91,7 +91,7 @@ def process_5g_data(data: dict) -> dict:
 
     processed_data["PCI"] = {
         "desc": "PCI",
-        "str_value": f"{int(data['nr5g_pci'],base=16)}",
+        "str_value": f"{int(data['nr5g_pci'], base=16)}" if data.get('nr5g_pci') else "N/A",
     }
 
     processed_data["EARFCN"] = {
